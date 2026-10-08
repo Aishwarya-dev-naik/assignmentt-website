@@ -1,0 +1,720 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>General Term of Binomial Expansion</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#222;
+    line-height:1.6;
+}
+
+header{
+    background:linear-gradient(135deg,#243b55,#141e30);
+    color:white;
+    text-align:center;
+    padding:35px 15px;
+}
+
+header h1{
+    margin:0;
+    font-size:32px;
+}
+
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:25px auto;
+}
+
+section{
+    background:white;
+    padding:25px;
+    margin-bottom:25px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+h2{
+    color:#243b55;
+    border-bottom:2px solid #243b55;
+    padding-bottom:8px;
+}
+
+h3{
+    color:#34495e;
+}
+
+.formula{
+    background:#eef4ff;
+    padding:18px;
+    border-left:5px solid #243b55;
+    margin:15px 0;
+    font-size:19px;
+    text-align:center;
+    font-weight:bold;
+    overflow-x:auto;
+}
+
+.example{
+    background:#fafafa;
+    border:1px solid #ddd;
+    padding:18px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.answer{
+    color:#176b3a;
+    font-weight:bold;
+}
+
+.tool{
+    background:#eef8f2;
+    border:1px solid #b8ddc7;
+}
+
+input[type="number"]{
+    width:100%;
+    padding:12px;
+    margin:8px 0 15px;
+    border:1px solid #bbb;
+    border-radius:6px;
+    font-size:16px;
+}
+
+button{
+    background:#243b55;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-top:5px;
+}
+
+button:hover{
+    background:#141e30;
+}
+
+#result{
+    margin-top:20px;
+    padding:15px;
+    background:white;
+    border-radius:8px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.exercise{
+    padding:12px;
+    margin:8px 0;
+    background:#f7f7f7;
+    border-radius:6px;
+}
+
+.quiz-question{
+    margin:20px 0;
+    padding:18px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    background:#fafafa;
+}
+
+.quiz-question p{
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+label{
+    display:block;
+    padding:8px;
+    cursor:pointer;
+}
+
+.correct{
+    background:#d9f5df;
+    color:#176b3a;
+    padding:10px;
+    margin-top:10px;
+    border-radius:6px;
+}
+
+.wrong{
+    background:#ffe0e0;
+    color:#a00000;
+    padding:10px;
+    margin-top:10px;
+    border-radius:6px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#243b55;
+    color:white;
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>General Term of Binomial Expansion</h1>
+</header>
+
+<div class="container">
+
+<!-- DEFINITION -->
+<section>
+
+<h2>1. Definition</h2>
+
+<p>
+A <b>binomial</b> is an algebraic expression consisting of two terms connected
+by a plus or minus sign. Examples of binomials are <b>(a+b)</b>,
+<b>(x-y)</b>, and <b>(2x+3y)</b>.
+</p>
+
+<p>
+When a binomial is raised to a positive integer power, its expansion produces
+a sequence of terms. The <b>Binomial Theorem</b> provides a systematic method
+for finding this expansion without multiplying the binomial repeatedly.
+</p>
+
+<p>
+In a binomial expansion, the coefficients are determined by the
+<b>binomial coefficients</b>. The general term gives a convenient way of
+finding any required term directly, without writing the complete expansion.
+</p>
+
+<div class="formula">
+(a+b)ⁿ = C(n,0)aⁿ + C(n,1)aⁿ⁻¹b + C(n,2)aⁿ⁻²b² + ... + C(n,n)bⁿ
+</div>
+
+<p>
+The powers of the first variable decrease from <b>n to 0</b>, while the
+powers of the second variable increase from <b>0 to n</b>. At the same time,
+the expansion contains exactly <b>n+1 terms</b>.
+</p>
+
+<p>
+Therefore, instead of expanding the entire expression, we can use the
+general-term formula to directly obtain a particular term or its coefficient.
+</p>
+
+</section>
+
+
+<!-- GENERAL TERM -->
+<section>
+
+<h2>2. General Term</h2>
+
+<p>
+For the binomial expansion of <b>(a+b)ⁿ</b>, the general term is represented
+by <b>T<sub>r+1</sub></b>. It gives the term in the expansion corresponding
+to a particular value of <b>r</b>.
+</p>
+
+<div class="formula">
+T<sub>r+1</sub> = C(n,r)a<sup>n-r</sup>b<sup>r</sup>
+</div>
+
+<p>where:</p>
+
+<ul>
+<li><b>n</b> is the power of the binomial.</li>
+<li><b>r</b> takes the values 0, 1, 2, ..., n.</li>
+<li><b>C(n,r)</b> is the binomial coefficient.</li>
+<li><b>T<sub>r+1</sub></b> represents the (r+1)th term.</li>
+</ul>
+
+<div class="formula">
+C(n,r) = n! / [r!(n-r)!]
+</div>
+
+<p>
+If the required term is the <b>kth term</b>, then
+<b>r = k−1</b>. Hence,
+</p>
+
+<div class="formula">
+T<sub>k</sub> = C(n,k−1)a<sup>n-k+1</sup>b<sup>k−1</sup>
+</div>
+
+<p>
+This formula is particularly useful when we need to find a particular term,
+a coefficient, a term independent of a variable, or the value of <b>r</b>
+corresponding to a required power.
+</p>
+
+</section>
+
+
+<!-- EXAMPLES -->
+<section>
+
+<h2>3. Examples</h2>
+
+<div class="example">
+
+<h3>Example 1</h3>
+
+<p><b>Find the coefficient of x⁵y² in (x+y)⁷.</b></p>
+
+<p>
+General term:
+T<sub>r+1</sub> = C(7,r)x<sup>7-r</sup>y<sup>r</sup>
+</p>
+
+<p>
+Comparing with x⁵y², we get r = 2.
+</p>
+
+<p>
+Coefficient = C(7,2) = <b>21</b>
+</p>
+
+<p class="answer">Answer: 21</p>
+
+</div>
+
+
+<div class="example">
+
+<h3>Example 2</h3>
+
+<p><b>Find the coefficient of a⁵b² in (2a−3b)⁷.</b></p>
+
+<p>
+General term:
+T<sub>r+1</sub> = C(7,r)(2a)<sup>7-r</sup>(−3b)<sup>r</sup>
+</p>
+
+<p>
+For a⁵b², r = 2.
+</p>
+
+<p>
+Coefficient = C(7,2)(2)⁵(−3)²
+</p>
+
+<p>
+= 21 × 32 × 9 = <b>6048</b>
+</p>
+
+<p class="answer">Answer: 6048</p>
+
+</div>
+
+
+<div class="example">
+
+<h3>Example 3</h3>
+
+<p><b>Find the coefficient of x¹² in x³(1−2x)¹⁰.</b></p>
+
+<p>
+Since x³ is already present, we need x⁹ from (1−2x)¹⁰.
+</p>
+
+<p>
+Therefore r = 9.
+</p>
+
+<p>
+Coefficient = C(10,9)(−2)⁹
+</p>
+
+<p>
+= 10 × (−512) = <b>−5120</b>
+</p>
+
+<p class="answer">Answer: −5120</p>
+
+</div>
+
+
+<div class="example">
+
+<h3>Example 4</h3>
+
+<p><b>Find the coefficient of x²y³ in (2x−5y)¹⁰.</b></p>
+
+<p>
+Every term in the expansion of (2x−5y)¹⁰ has total degree 10.
+</p>
+
+<p>
+But x²y³ has total degree 5.
+</p>
+
+<p>
+Therefore, x²y³ cannot occur in the expansion.
+</p>
+
+<p class="answer">Answer: 0</p>
+
+</div>
+
+
+<div class="example">
+
+<h3>Example 5</h3>
+
+<p><b>Find the term independent of x in (x²+2/x)⁹.</b></p>
+
+<p>
+General term:
+T<sub>r+1</sub> = C(9,r)(x²)<sup>9-r</sup>(2/x)<sup>r</sup>
+</p>
+
+<p>
+Power of x = 2(9−r)−r = 18−3r.
+</p>
+
+<p>
+For a term independent of x:
+18−3r = 0
+</p>
+
+<p>
+Therefore r = 6, so the required term is the 7th term.
+</p>
+
+<p>
+T₇ = C(9,6) × 2⁶ = 84 × 64 = <b>5376</b>
+</p>
+
+<p class="answer">Answer: 5376</p>
+
+</div>
+
+</section>
+
+
+<!-- INTERACTIVE TOOL -->
+<section class="tool">
+
+<h2>4. Interactive Learning Tool</h2>
+
+<p>
+Enter <b>n</b> and <b>r</b> to obtain the corresponding general term of
+(a+b)ⁿ.
+</p>
+
+<label><b>Enter n:</b></label>
+
+<input type="number" id="nValue" min="0" placeholder="Example: 7">
+
+<label><b>Enter r:</b></label>
+
+<input type="number" id="rValue" min="0" placeholder="Example: 2">
+
+<button onclick="findTerm()">Find General Term</button>
+
+<div id="result"></div>
+
+</section>
+
+
+<!-- EXERCISES -->
+<section>
+
+<h2>5. Exercises</h2>
+
+<div class="exercise">
+1. Find the general term in (3x−2y)⁸.
+</div>
+
+<div class="exercise">
+2. Find the coefficient of x³y² in (2x+3y)⁵.
+</div>
+
+<div class="exercise">
+3. Find the term independent of x in (x²+2/x)⁹.
+</div>
+
+<div class="exercise">
+4. Find the coefficient of x⁴ in (x+2/x)⁸.
+</div>
+
+<div class="exercise">
+5. Find the 6th term in (2x−3y)⁹.
+</div>
+
+</section>
+
+
+<!-- QUIZ -->
+<section>
+
+<h2>6. Quiz</h2>
+
+<p><b>Choose the correct answer.</b></p>
+
+
+<div class="quiz-question">
+
+<p>1. Find the coefficient of x⁵y⁴ in (3x−2y)⁹.</p>
+
+<label><input type="radio" name="q1" value="A"> A. −27216</label>
+<label><input type="radio" name="q1" value="B"> B. 27216</label>
+<label><input type="radio" name="q1" value="C"> C. −18144</label>
+<label><input type="radio" name="q1" value="D"> D. 18144</label>
+
+</div>
+
+
+<div class="quiz-question">
+
+<p>2. Find the coefficient of x⁶ in x²(2−3x)⁸.</p>
+
+<label><input type="radio" name="q2" value="A"> A. 30618</label>
+<label><input type="radio" name="q2" value="B"> B. −30618</label>
+<label><input type="radio" name="q2" value="C"> C. 20412</label>
+<label><input type="radio" name="q2" value="D"> D. −20412</label>
+
+</div>
+
+
+<div class="quiz-question">
+
+<p>3. Find the term independent of x in (2x²−3/x)⁹.</p>
+
+<label><input type="radio" name="q3" value="A"> A. 7th term</label>
+<label><input type="radio" name="q3" value="B"> B. 6th term</label>
+<label><input type="radio" name="q3" value="C"> C. 8th term</label>
+<label><input type="radio" name="q3" value="D"> D. 5th term</label>
+
+</div>
+
+
+<div class="quiz-question">
+
+<p>4. Find the 7th term in (2x−3y)¹⁰.</p>
+
+<label><input type="radio" name="q4" value="A"> A. 604800x⁴y⁶</label>
+<label><input type="radio" name="q4" value="B"> B. −604800x⁴y⁶</label>
+<label><input type="radio" name="q4" value="C"> C. −453600x⁴y⁶</label>
+<label><input type="radio" name="q4" value="D"> D. 453600x⁴y⁶</label>
+
+</div>
+
+
+<div class="quiz-question">
+
+<p>5. Find the coefficient of x⁵ in (x²−2/x)⁷.</p>
+
+<label><input type="radio" name="q5" value="A"> A. −672</label>
+<label><input type="radio" name="q5" value="B"> B. 672</label>
+<label><input type="radio" name="q5" value="C"> C. −448</label>
+<label><input type="radio" name="q5" value="D"> D. 448</label>
+
+</div>
+
+
+<div class="quiz-question">
+
+<p>6. Find the value of r for which the term containing x⁶ in (x²+1/x)¹⁰ occurs.</p>
+
+<label><input type="radio" name="q6" value="A"> A. r = 4</label>
+<label><input type="radio" name="q6" value="B"> B. r = 5</label>
+<label><input type="radio" name="q6" value="C"> C. r = 6</label>
+<label><input type="radio" name="q6" value="D"> D. r = 7</label>
+
+</div>
+
+
+<div class="quiz-question">
+
+<p>7. Find the coefficient of x⁸y⁴ in (2x³−3y²)⁴.</p>
+
+<label><input type="radio" name="q7" value="A"> A. 216</label>
+<label><input type="radio" name="q7" value="B"> B. −216</label>
+<label><input type="radio" name="q7" value="C"> C. 432</label>
+<label><input type="radio" name="q7" value="D"> D. 648</label>
+
+</div>
+
+
+<div class="quiz-question">
+
+<p>8. Find the 4th term in (3x²−2/x)⁻¹/².</p>
+
+<label><input type="radio" name="q8" value="A"> A. −35/(16×3⁴)x⁻¹⁰</label>
+<label><input type="radio" name="q8" value="B"> B. 35/(16×3⁴)x⁻¹⁰</label>
+<label><input type="radio" name="q8" value="C"> C. −35/(8×3⁴)x⁻¹⁰</label>
+<label><input type="radio" name="q8" value="D"> D. 35/(8×3⁴)x⁻¹⁰</label>
+
+</div>
+
+
+<button onclick="submitQuiz()">Submit Quiz</button>
+
+<div id="quizResult"></div>
+
+</section>
+
+</div>
+
+
+<footer>
+General Term of Binomial Expansion | Interactive Learning Tool
+</footer>
+
+
+<script>
+
+function factorial(n){
+
+    let result = 1;
+
+    for(let i = 2; i <= n; i++){
+        result *= i;
+    }
+
+    return result;
+}
+
+
+function combination(n,r){
+
+    if(r < 0 || r > n){
+        return 0;
+    }
+
+    return factorial(n) / (factorial(r) * factorial(n-r));
+}
+
+
+function findTerm(){
+
+    let n = parseInt(document.getElementById("nValue").value);
+    let r = parseInt(document.getElementById("rValue").value);
+
+    let result = document.getElementById("result");
+
+    if(isNaN(n) || isNaN(r)){
+        result.innerHTML = "Please enter both n and r.";
+        return;
+    }
+
+    if(n < 0 || r < 0 || r > n){
+        result.innerHTML = "Please enter valid values where 0 ≤ r ≤ n.";
+        return;
+    }
+
+    let coefficient = combination(n,r);
+
+    result.innerHTML =
+        "T" + (r+1) +
+        " = C(" + n + "," + r + ") a<sup>" +
+        (n-r) + "</sup>b<sup>" + r + "</sup>" +
+        "<br><br>Coefficient = " + coefficient;
+}
+
+
+function submitQuiz(){
+
+    const answers = {
+        q1:"A",
+        q2:"B",
+        q3:"A",
+        q4:"B",
+        q5:"B",
+        q6:"B",
+        q7:"B",
+        q8:"A"
+    };
+
+    let score = 0;
+    let output = "";
+
+    for(let i = 1; i <= 8; i++){
+
+        let selected = document.querySelector(
+            'input[name="q'+i+'"]:checked'
+        );
+
+        if(!selected){
+
+            output +=
+            "<div class='wrong'>" +
+            "Question " + i +
+            ": Not answered. Correct answer: " +
+            answers["q"+i] +
+            "</div>";
+
+        }
+        else if(selected.value === answers["q"+i]){
+
+            score++;
+
+            output +=
+            "<div class='correct'>" +
+            "Question " + i +
+            ": Correct ✓" +
+            "</div>";
+
+        }
+        else{
+
+            output +=
+            "<div class='wrong'>" +
+            "Question " + i +
+            ": Wrong. Correct answer: " +
+            answers["q"+i] +
+            "</div>";
+        }
+    }
+
+    let message =
+    "<h3>Your Score: " + score + " / 8</h3>";
+
+    if(score === 8){
+
+        message +=
+        "Excellent! You got all the answers correct.";
+
+    }
+    else if(score >= 6){
+
+        message +=
+        "Very good! Keep practicing.";
+
+    }
+    else if(score >= 4){
+
+        message +=
+        "Good attempt. Review the general-term formula.";
+
+    }
+    else{
+
+        message +=
+        "Keep practicing the general term and coefficient methods.";
+
+    }
+
+    document.getElementById("quizResult").innerHTML =
+    message + output;
+}
+
+</script>
+
+</body>
+</html>
